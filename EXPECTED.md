@@ -34,3 +34,22 @@ Initial-load expectations:
 	allocation; this fixture does not prescribe the resulting runtime prefix.
 - A rendered runtime locator uses bracketed MID/TID form, such as `[fd00::12]:0` for the base root.
 - Human-readable aliases are secondary and are not specified by this fixture.
+
+## Provisional host-ID contract
+
+Source model IDs are canonical, uncompressed host values made from one or more non-empty lowercase
+hexadecimal components separated by colons. Import rejects uppercase hexadecimal, `0x` prefixes,
+empty components, whitespace, and leading-zero aliases instead of normalizing them. The first
+component selects the declared numeric address block; block IDs must be unique within a payload.
+
+The following conformance inputs are intentionally small and are consumed by the importer tests:
+
+| Input | Expected result |
+| --- | --- |
+| `conformance/malformed-uppercase.xml` | reject: uppercase host component |
+| `conformance/malformed-prefix.xml` | reject: `0x` host component |
+| `conformance/malformed-empty-component.xml` | reject: empty host component |
+| `conformance/collision/first.xml` and `conformance/collision/second.xml` | reject: two source identities resolve to one runtime MID |
+
+The legacy `psp-core` validator fixture retains its historical `fd00::/8` model-ID contract. This
+forward-looking fixture does not change that validator behavior.
