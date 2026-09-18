@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:psp:targeting"
+           xmlns:psp="urn:psp:targeting"
+           elementFormDefault="qualified">
+  <xs:attribute name="model-id" type="psp:model-id" />
+  <xs:attribute name="target-id" type="psp:target-id" />
+
+  <xs:simpleType name="model-id">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="fd00:.*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="target-id">
+    <xs:restriction base="xs:nonNegativeInteger" />
+  </xs:simpleType>
+</xs:schema>

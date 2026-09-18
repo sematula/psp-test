@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:psp="urn:psp:targeting"
+         psp:model-id="fd00::12"
+         psp:target-id="0">
+  <title psp:target-id="1">Programmable Semantic Payload</title>
+  <body psp:target-id="2">A model can be addressed, inspected, and transformed.</body>
+</article>

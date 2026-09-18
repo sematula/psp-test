@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta:metadata xmlns:meta="urn:psp:meta"
+               xmlns:psp="urn:psp:targeting"
+               psp:model-id="fd00::13"
+               psp:target-id="0">
+  <meta:description psp:target-id="1">Metadata for the article model.</meta:description>
+</meta:metadata>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:psp:meta"
+           xmlns:meta="urn:psp:meta"
+           elementFormDefault="qualified">
+  <xs:element name="metadata" type="meta:metadata-type" />
+
+  <xs:complexType name="metadata-type">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+    </xs:sequence>
+    <xs:anyAttribute processContents="lax" />
+  </xs:complexType>
+</xs:schema>

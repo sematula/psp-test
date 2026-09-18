@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psp:domain xmlns:psp="urn:psp:core"
+            psp:compatible="true"
+            psp:knowledge-domain="wiki"
+            psp:domain-version="0.1.0">
+  <psp:profiles>
+    <psp:profile name="xhtml" version="0.1.0" />
+  </psp:profiles>
+</psp:domain>
