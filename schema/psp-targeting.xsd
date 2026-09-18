@@ -8,7 +8,7 @@
 
   <xs:simpleType name="model-id">
     <xs:restriction base="xs:string">
-      <xs:pattern value="fd00:.*" />
+      <xs:pattern value="[0-9a-f]+(:[0-9a-f]+)*" />
     </xs:restriction>
   </xs:simpleType>
 

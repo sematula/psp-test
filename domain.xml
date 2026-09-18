@@ -6,4 +6,7 @@
   <psp:profiles>
     <psp:profile name="xhtml" version="0.1.0" />
   </psp:profiles>
+  <psp:addressing>
+    <psp:block id="0" />
+  </psp:addressing>
 </psp:domain>

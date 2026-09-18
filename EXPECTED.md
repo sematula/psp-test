@@ -10,19 +10,25 @@ This fixture represents one source repository at a pinned Git revision.
 - `models/knowledge/article.xml`
 - `models/meta/article-meta.xml`
 
-## Expected model identities
+## Expected model identities and pairing
 
-| Source path | Model ID | Root target | Child targets |
-| --- | --- | --- | --- |
-| `models/knowledge/article.xml` | `fd00::12` | `0` | `1`, `2` |
-| `models/meta/article-meta.xml` | `fd00::13` | `0` | `1` |
+| Base source path | Meta source path | Source model ID | Root target | Child targets |
+| --- | --- | --- | --- | --- |
+| `models/knowledge/article.xml` | `models/meta/article-meta.xml` | `0:15a` | `0` | `1`, `2` |
 
-The `models/meta` directory is human-readable organization only. The metadata document is an ordinary model for this fixture; no special meta-model loading behavior is required.
+The base and meta documents form one completed model pair through their shared source model ID.
+The meta document is attached metadata and is not independently targetable in the provisional import
+contract. The `models/meta` directory remains human-readable organization only.
+
+This fixture uses one block. Whether a rendered `block` element stands alone or is nested under a
+`superblock` element when multiple blocks are declared remains intentionally deferred.
 
 The XHTML profile is declared by `domain.xml` as an early profile placeholder. Its schema and behavior are outside this PSP Core fixture.
 
 Initial-load expectations:
 
 - XML model bytes are preserved.
-- The primary locators are `fd00::12:0`, `fd00::12:1`, `fd00::12:2`, `fd00::13:0`, and `fd00::13:1`.
+- The source host locators are `0:15a:0`, `0:15a:1`, and `0:15a:2`.
+- Axonn derives the globally unique runtime model ID by applying the imported address-block/network
+	allocation; this fixture does not prescribe the resulting runtime prefix.
 - Human-readable aliases are secondary and are not specified by this fixture.
