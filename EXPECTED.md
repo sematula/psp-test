@@ -17,8 +17,9 @@ This fixture represents one source repository at a pinned Git revision.
 | `models/knowledge/article.xml` | `models/meta/article-meta.xml` | `0:15a` | `0` | `1`, `2` |
 
 The base and meta documents form one completed model pair through their shared source model ID.
-The meta document is attached metadata and is not independently targetable in the provisional import
-contract. The `models/meta` directory remains human-readable organization only.
+The base object is PSP-targeting-conformant; the meta object is PSP-meta-conformant and is not
+independently targetable in the provisional import contract. The `models/meta` directory remains
+human-readable organization only.
 
 This fixture uses one block. Whether a rendered `block` element stands alone or is nested under a
 `superblock` element when multiple blocks are declared remains intentionally deferred.
@@ -31,4 +32,5 @@ Initial-load expectations:
 - The source host locators are `0:15a:0`, `0:15a:1`, and `0:15a:2`.
 - Axonn derives the globally unique runtime model ID by applying the imported address-block/network
 	allocation; this fixture does not prescribe the resulting runtime prefix.
+- A rendered runtime locator uses bracketed MID/TID form, such as `[fd00::12]:0` for the base root.
 - Human-readable aliases are secondary and are not specified by this fixture.
