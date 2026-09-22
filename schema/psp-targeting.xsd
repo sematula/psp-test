@@ -8,8 +8,9 @@
 
   <xs:simpleType name="model-id">
     <xs:restriction base="xs:string">
-      <!-- Source model IDs are canonical lowercase hexadecimal host components. -->
-      <xs:pattern value="[0-9a-f]+(:[0-9a-f]+)*" />
+      <!-- Stored IDs: an optional lowercase-hex block/superblock tier prefix, then the
+           uncompressed 32-bit segment as two zero-padded four-digit hextets. -->
+      <xs:pattern value="([0-9a-f]+:)?[0-9a-f]{4}:[0-9a-f]{4}" />
     </xs:restriction>
   </xs:simpleType>
 

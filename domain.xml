@@ -7,7 +7,4 @@
     <psp:profile name="xhtml" version="0.1.0" />
   </psp:profiles>
   <psp:block group="0" />
-  <psp:superblock group="f">
-    <psp:block group="1" />
-  </psp:superblock>
 </psp:domain>
