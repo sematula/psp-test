@@ -1,0 +1,3 @@
+# artifacts/ephemeral/ is disposable engine workspace/output; psp-spec/docs/repository-shape.md
+# requires it MUST NOT be committed.
+/artifacts/ephemeral/

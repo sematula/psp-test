@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Engine-maintained reconciliation state for unresolved/stale ordinary relationships
+     (psp-spec/docs/repository-shape.md). Empty: nothing has been imported/evaluated yet. -->
+<psp:targets xmlns:psp="urn:psp:core" />

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Engine-maintained Set membership/evaluation state (psp-spec/docs/repository-shape.md).
+     Empty: no Sets are declared in this fixture yet. -->
+<psp:sets xmlns:psp="urn:psp:core" />

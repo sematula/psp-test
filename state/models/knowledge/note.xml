@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns:psp="urn:psp:targeting"
+      psp:model-id="f1:200"
+      psp:target-id="0">
+  A model addressed through a superblock-tiered recorded ID.
+</note>
